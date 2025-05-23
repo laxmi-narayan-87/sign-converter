@@ -4,6 +4,11 @@ from nltk.stem import WordNetLemmatizer
 from nltk.corpus import stopwords
 from nltk import pos_tag
 from django.contrib.staticfiles import finders
+from django.http import HttpResponse
+import nltk
+
+def home_view(request):
+	return render(request,'home.html')
 
 def animation_view(request):
 	if request.method == 'POST':
